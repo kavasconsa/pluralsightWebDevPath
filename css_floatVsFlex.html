@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <style> 
+    
+    /* --- FLOAT RULE --- */
+
+    /*The style below helps us to see how much space the div with class columns is occupying */   
+    .columns{
+        width: 100%; /*This is a container class so we will give it a width*/
+        border: solid 1px rgb(221, 4, 4);
+    }
+
+    /* The style rule below tries to situate both columns next to each other by selecting the
+    children of columns class selector. 
+    We are trying to make each column take up the same amount of space on the page */
+    .columns > div{
+        width: 49%; /*it cannot be 50% because they will not be able to sit next to each other. 
+        However, this will leave a small space on the right of the page*/
+        border: solid 1px #ddd;
+        float: left;
+    }
+
+    /* --- FLEXBOX RULE --- */
+
+    /* This creates a selector for the newColumns class and gives it a border*/
+    .newColumns{
+        width: 100%;
+        border: solid 1px rgb(113, 125, 233);
+        display: flex; /* This rule already gives us 2 columns on the page, alhtough it is not customized 
+                            if we leave like that */                
+    }
+
+    /* The child selector below will target the divs inside the container newColumns that was 
+        styled above */
+    .newColumns > div{
+        border: solid 1px   #ddd;
+        flex: 1; /* The flex rule provides the dimention that we want, same amount of space for 
+                    each column without leaving an unused space on the page. */                    
+    }
+    
+    /* This rule will define more space for the Column 4 and automatically evenly distribute the
+       rest of the space for Columns 3 and 5 */
+    /* The selector below is called PSEUDO-CLASS by adding a column on the child selector */
+
+    .newColumns > div:nth-of-type(2){/* the nth-of-type tells the browser to look for a div within
+                                        the container based off its position  */
+        flex: 2; /* This gives the second column (Column4) the double of the proportion of a single space */
+    }
+ </style>
+</head>
+<body>
+    <div class="columns">
+        <div>Column 1</div>
+        <div>Column 2</div>
+    </div>
+    <div class="newColumns">
+        <div>Column 3</div>
+        <div>Column 4</div>
+        <div>Column 5</div>
+    </div>
+</body>
+</html>

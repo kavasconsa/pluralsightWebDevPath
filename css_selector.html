@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Selectors are a way to locate elements on the page, they are:
+    * Tag
+    * Class
+    * ID
+    * Attribute Selectors 
+    * List Selector -->
+    <style>
+        /* ---  TAG SELECTOR  ---  */
+        /* This is a Tag selector, it's selecting all images in the page*/
+        img{
+          border: solid 1px #777; /* this border is not being shown while the 
+                                        List Selector is styling it below (1) */
+        }
+                    
+        /*  ---  CLASS SELECTOR  ---  */
+        /*This is a Class selector, it begins with "." the dot will tell the
+        browser that it's looking for elements based upon the class name  */
+        .tutorial{
+            border: solid 2px rgb(161, 53, 156); 
+        }
+        
+        /*  ---  ID SELECTOR  ---  */
+        /*This is an ID selector, it begins with # symbol and the browser will 
+        read the rules only for the ID indicated */
+        #tutorial-1{
+            background-color: rgb(188, 206, 177);
+        }
+
+        /*  ---  ATTRIBUTE SELECTOR  ---  */
+        /* This is can be the most specific and the most flexible way to style
+        in the example below, the attribute being styled is the specific source mentioned
+        it begins with a tag and then the attribute is selected inside the brackets [] .
+        */
+
+        img[src="https://via.placeholder.com/150"] {
+            border: solid  20px rgb(81, 40, 194);
+        }
+
+        /* ---  LIST SELECTORS  ---  */
+        /* List selector can give the same style to different elements on the page */
+        h1, 
+        h2{
+            color: rgb(138, 30, 210);
+        }
+
+        /* List selector can mix and match different types of selectors (1)  */
+        .tutorial, 
+        h1{
+            border: solid 1px #ccc;
+        }
+
+        /*  ---  COMBINED SELECTORS ---  */
+        /*This is the child combinator rule, you can create a rule that targets a specific child
+        of a specific element. For insntance, the paragraphs inside tutorial class will be selected,
+        not the paragraph below h1.
+        */
+        .tutorial > p {
+            font-size: 1.5em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Introduction to CSS</h1>
+    <p>These tutorials teach you CSS.</p>  
+    <div class="tutorial" id="tutorial-1">
+        <h2>Tutorial 1</h2> 
+        <img src="https://via.placeholder.com/150" alt="">
+        <p>To begin with tutorial 1...</p>
+    </div>
+    <div class="tutorial" id="tutorial-2">
+        <h2>Tutorial 2</h2>
+        <img src="https://via.placeholder.com/100" alt="">
+        <p>To begin with tutorial 2...</p>
+    </div>
+    
+</body>
+</html>

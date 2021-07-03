@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        main{background-color: darkgrey;
+            width: 50%;
+        }
+        body{
+            background-color: cornflowerblue;
+            
+        }
+
+        /* If no style is defined for h1 element, it will inherit the parent's style, 
+        except the dimmentional properties */
+        h1{
+
+        }
+        h2{
+            background-color: aquamarine;
+            width: 50%; /* Notice that only 50% of the background is aquamarine*/
+        }
+
+        /* Not all properties are inherit. For instance, dimmentional properties
+        notice that 100% of the background is still chartreuse */
+        p{
+            background-color: chartreuse;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Title</h1>
+        <h2>Only 50% of this element is colored because it has its own width style </h2>
+        <p> This is a paragraph that will not inherit its parent (main) width property.
+            While the h2 element has its own width property. 
+        </p>
+    </main>
+</body>
+</html>
