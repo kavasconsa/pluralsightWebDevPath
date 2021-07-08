@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt Selecting Elements</title>
+</head>
+<body>
+    <section id="karla-vasconcelos" class="card">
+        <h1>Karla Vasconcelos</h1>
+        <ul>
+            <li><a href="https://twitter.com/kavasconsa" class="tag">Twitter</a></li>
+            <li><a href="https://github.com/kavasconsa" class="tag">GitHub</a></li>
+        </ul>
+    </section>
+    <section id="olliver-nono" class="card">
+        <h1>Olliver Nono</h1>
+        <ul>
+            <li><a href="https://twitter.com/olliver_nono" class="tag">Twitter</a></li>
+            <li><a href="https://github.com/olliver_nono" class="tag">GitHub</a></li>
+        </ul>
+    </section>
+    <script>
+
+        /*
+        Selecting elements on a page is one of the most common actions one does in JavaScript,
+        it helps creates functionalities to specific parts of the page.
+
+        The HTML elements above can be accessed individually by its ids or both of them at
+        the same time by their class.
+        
+        The examples below will be done directly on the Browser Console.
+        Open this page on Chrome and right click on it > Inspect > Console
+
+        ** Function gerElementById **
+        Returns a specific element, for instance, it returns a reference to the section element, because it has the id of karla-vasconcelos.
+
+        document.getElementById("karla-vasconcelos");
+        
+        ** Function querySelector **
+        Accessess card class, but only the first:
+
+        document.querySelector(".card")
+
+        The code below accesses all:
+        document.querySelectorAll(".card")        
+
+        */
+
+        
+    </script>
+    
+</body>
+</html>

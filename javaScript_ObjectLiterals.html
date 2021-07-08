@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt Object Literals</title>
+</head>
+<body>
+    <script>
+       // Object Literal groups data and funcionality together
+
+       // the variables below are all related to each other
+       let firstName = "Karla";
+       let lastName = "Vasconcelos";
+       let twitter = "kavasconsa";
+
+       // Objects Literal group all this data together and pass them around as a single variable
+       // the brackets after the declaration of a variable tells the browser that it will be an object
+       // the brackets create a block, where we can create properties for the object
+       // Notice that the properties have a colon and to end it, there's a coma.
+
+       let person = {
+           firstName: "Karla",
+           lastName: "Vasconcelos",
+           twitter: "@kavasconsa",
+           /* function inside object literals */
+           greet: function() { 
+               console.log("My name is " + this.firstName); // this.firstName 'this' is a key word accessing this object '.firstName' selects its property
+           }
+        }; 
+
+        /* Instead of dealing with individual pieces of data, firstName, lastName, twitter..
+        we can use just the 'person'object */
+        console.log(person);
+
+        // target specific pieces of data within the object with "." 
+        console.log(person.firstName);
+
+        // Calls the function directly off the object
+        person.greet();
+        
+
+    </script>
+    
+</body>
+</html>

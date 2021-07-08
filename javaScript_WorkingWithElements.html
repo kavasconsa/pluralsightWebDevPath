@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt Working With Elements</title>
+    <style>
+        .card {
+            background-color: aquamarine;
+            display: flex;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            border: solid 1px #ccc;
+            padding: 3px;
+            
+        }
+    </style>
+</head>
+<body>
+    <section id="karla-vasconcelos" class="card">
+        <h1>Karla Vasconcelos</h1>
+        <ul>
+            <li><a href="https://twitter.com/kavasconsa" class="tag">Twitter</a></li>
+            <li><a href="https://github.com/kavasconsa" class="tag">GitHub</a></li>
+        </ul>
+    </section>
+    <section id="olliver-nono" class="card">
+        <h1>Olliver Nono</h1>
+        <ul>
+            <li><a href="https://twitter.com/olliver_nono" class="tag">Twitter</a></li>
+            <li><a href="https://github.com/olliver_nono" class="tag">GitHub</a></li>
+        </ul>
+    </section>
+    <script>
+        /* ** Chaging Atrributes with JavaScript ** 
+
+        The original way the links on each card is setup on the HTML file is opening
+        its page on the same page.
+
+        The code below will add an attribute on the HTML on the browser that will
+         make a new window open once each link is clicked.
+
+        The anchor element originally has the attributes href and class, the new attribute
+        our JavaScript code below will add is Target, that allows us to designate the destination
+        of the link location.
+
+        */
+
+        let links = document.querySelectorAll(".tag");
+        links.forEach(function(link) {
+            link.setAttribute("target", "_blank");
+        });
+
+        /* document.querySelectorAll - selects all the elements that have the .tag class on
+         on the page, once they are selected we can iterate through them.
+
+         forEach function - inside of forEach function we create an anonymous function and an
+         argument for the individual link. So each time it goes through this loop, the link
+         variable will be in reference to an inidivudal link on the page.
+
+         setAttribute - is a functionw where new attributes can be created or new values can be 
+         set for existing attriutes. I created the target attribute with its value being blank.
+
+        */
+        
+        /* getAttribute - shows the attributes assigned for an element.
+        Explore it on the browser by following the steps:
+
+        1) On the browser right click on any link from your cards
+        2) Select Inspect
+        3) The link you selected will be highlighted and the inspect feature created a temporary
+        variable for it called $0
+        4) Open the console and call $0, it should return your html link with all its attributes 
+        including the new once created "target"
+        5) $0.getAttribute("target"); will show you the value of this attribute
+        6) Try calling other attributes on the argument of getAttribute funcition to explore more
+        7) For instance: $0.getAttribute("href");
+
+        */
+
+
+
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

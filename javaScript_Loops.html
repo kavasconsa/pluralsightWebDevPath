@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt Loop</title>
+</head>
+<body>
+    <script>
+        // WHILE LOOP
+        
+        // this will count from 0 to 10
+        /*
+        let count = 0;
+        let max = 10;
+
+        while(count < max) {
+            console.log(count);
+            count = count + 1; // this increments the count variable so the loop is not infinity
+        }
+        */
+    
+        /*--------------------------------------------------------------------------------*/
+
+        // FOR LOOP
+
+        // This counts from  1 to 10 and it is way less code then the while loop above
+        /*
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+        */
+
+        // this will extract and print on console the value from the array according to 
+        // its position (index) by using the lenght of the array as the max value to stop the loop
+        /*
+        let numbers = [true, 200, "Hello"];
+
+        for (let i = 0; i < numbers.length; i++) {
+            console.log(numbers[i]);
+        }
+        */
+
+        /*--------------------------------------------------------------------------------*/
+
+        // FOR EACH
+
+        /* forEach iterates over the values of an array one by one with a much more simple
+         sintax than the foor loop 
+
+        The program below will print something specific for each item from the array by calling the
+         funtion forEach off of the day's array.
+
+         The function forEach takes a function (this is a feature from JavaScript where a function
+         can automatically call another function).
+
+         The function created below being called by the forEach function does not have a name
+         it is "function" and this is called an anonymous function.
+
+         The anonimous function had an argument of a template string created using back stick `` .
+
+
+        */
+
+        let days = ["Mon", "Tue", "Wed"] ;
+
+        days.forEach(function(day,index){
+            console.log(`day ${day}, index: ${index}`)
+        });
+
+        
+    </script>
+    
+</body>
+</html>
